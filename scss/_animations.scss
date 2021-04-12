@@ -1,0 +1,128 @@
+// heading fade-in
+
+@keyframes heading {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+// subheading floating letters
+
+@keyframes subheading {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0) translateY(0) rotateY(180deg) rotateX(180deg);
+    }
+}
+
+// subheading flip
+
+@keyframes subheading-flip {
+    0% {
+        transform: translateX(0) translateY(0) rotateY(180deg) rotateX(180deg);
+    }
+    50% {
+        transform: translateX(0) translateY(0) rotateY(180deg) rotateX(0);
+    }
+    100% {
+        transform: translateX(0) translateY(0) rotateY(0) rotateX(0);
+    }
+}
+
+// forward button fade-in
+
+@keyframes forward-button {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.7;
+    }
+}
+
+// forward button text highlight
+
+@keyframes text-highlight {
+    0% {
+        opacity: 0.7;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.7;
+    }
+}
+
+// forward button icon pulse
+
+@keyframes icon-pulse {
+    0% {
+        opacity: 0.7;
+    }
+    20% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.7;
+    }
+}
+
+// various content fade-in
+
+@keyframes content-fade-in {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+// flip tech icons in about section
+
+@keyframes tech-flip {
+    0% {
+        transform: rotateY(90deg);
+    }
+    50% {
+        transform: rotateY(0);
+    }
+    100% {
+        transform: rotateY(0);
+    }
+}
+
+// footer fade-in
+
+@keyframes footer {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.2;
+    }
+}

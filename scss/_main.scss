@@ -1,0 +1,309 @@
+main {
+    width: 100%;
+    height: 100vh;
+    h1,
+    h2,
+    h3 {
+        text-align: center;
+        text-shadow: 2px 2px 10px map-get($colors, main-medium);
+    }
+
+    h1 {
+        padding-top: 30vh;
+        animation: heading 1.5s ease-in;
+        @include mq(smartphone) {
+            padding-top: 25vh;
+        }
+        @include mq(desktop-small) {
+            text-align: left;
+        }
+    }
+
+    h2 {
+        margin-bottom: 40px;
+        padding-top: 20vh;
+        animation: heading 1s ease-in;
+        @include mq(smartphone) {
+            margin-bottom: 24px;
+        }
+        @include mq(desktop-small) {
+            margin-bottom: 40px;
+            text-align: left;
+        }
+        @include mq(desktop-medium) {
+            margin-bottom: 60px;
+        }
+    }
+
+    h3 {
+        span {
+            display: inline-block;
+            transform-style: preserve-3d;
+            animation: subheading 2s ease-in-out both,
+                subheading-flip 1.2s ease-in-out forwards;
+            @for $i from 1 through 25 {
+                &:nth-of-type(#{$i}) {
+                    transform: translateX(#{random(50)}vw)
+                        translateY(#{random(50)}vh)
+                        rotateY(#{random(180)}deg)
+                        rotateX(#{random(180)}deg);
+                    animation-delay: #{1.5 + ($i/20)}s, 6s;
+                }
+            }
+        }
+        @include mq(desktop-small) {
+            text-align: left;
+        }
+    }
+
+    .btn-forward {
+        text-align: center;
+        animation: forward-button 1s 7s ease-in forwards;
+        opacity: 0;
+        p {
+            margin-top: 35vh;
+            @include mq(smartphone) {
+                margin-top: 15vh;
+            }
+            @include mq(desktop-small) {
+                margin-top: 26vh;
+                font-size: 1.2rem;
+            }
+            @include mq(desktop-medium) {
+                margin-top: 30vh;
+                margin-bottom: 10px;
+                font-size: 1.4rem;
+            }
+        }
+        i {
+            margin-top: 10px;
+            font-size: 2.4rem;
+            text-shadow: 2px 2px 10px map-get($colors, main-medium);
+            animation: icon-pulse 3s 8s ease-in-out infinite both;
+            cursor: pointer;
+            @include mq(desktop-small) {
+                font-size: 2.8rem;
+            }
+            @include mq(desktop-medium) {
+                font-size: 3.2rem;
+            }
+        }
+        span {
+            cursor: default;
+            animation: text-highlight 3s ease-in infinite both;
+            @for $i from 1 through 25 {
+                &:nth-of-type(#{$i}) {
+                    animation-delay: #{1 + ($i/10)}s;
+                }
+            }
+        }
+    }
+
+    .portfolio {
+        overflow-y: auto;
+        width: 100%;
+        height: 60vh;
+        @include mq(smartphone) {
+            display: flex;
+            flex-wrap: wrap;
+            width: 90%;
+            height: 52vh;
+            margin: 0 auto;
+            padding-bottom: 40px;
+        }
+        @include mq(desktop-small) {
+            width: 100%;
+            height: auto;
+        }
+        .project {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 30px;
+            &:nth-of-type(1) {
+                margin-top: 0;
+            }
+            &:nth-of-type(1),
+            &:nth-of-type(2) {
+                @include mq(smartphone) {
+                    margin-top: 0;
+                }
+            }
+            &:nth-of-type(1),
+            &:nth-of-type(2),
+            &:nth-of-type(3) {
+                @include mq(desktop-small) {
+                    margin-top: 0;
+                }
+            }
+
+            animation: content-fade-in 1s ease-in both;
+            @for $i from 1 through 7 {
+                &:nth-of-type(#{$i}) {
+                    animation-delay: #{($i/10)}s;
+                }
+            }
+            @include mq(smartphone) {
+                width: 40%;
+            }
+            @include mq(desktop-small) {
+                width: 28%;
+            }
+            @include mq(desktop-medium) {
+                margin-top: 50px;
+            }
+            .name {
+                grid-column: 1/-1;
+                grid-row: 1/2;
+                font-size: 1.2rem;
+                i {
+                    margin-right: 10px;
+                }
+            }
+            .description {
+                grid-column: 1/-1;
+                grid-row: 2/3;
+                font-weight: 300;
+            }
+            .tech {
+                grid-column: 1;
+                grid-row: 3;
+                place-self: center center;
+                display: flex;
+                i {
+                    font-size: 1.2rem;
+                    padding: 0 5px;
+                }
+                img {
+                    height: 1.2rem;
+                    padding: 0 5px;
+                }
+            }
+            .link {
+                align-self: center;
+                margin-top: 5px;
+                padding: 0 10px;
+                a {
+                    font-size: 1.6rem;
+                    color: #f3f3f3;
+                    i {
+                        @include mq(desktop-small) {
+                            opacity: 0.7;
+                            transition: 0.2s linear;
+                        }
+                    }
+                    &:hover i {
+                        @include mq(desktop-small) {
+                            opacity: 1;
+                            transform: translateY(10%) scale(1.1);
+                        }
+                    }
+                }
+            }
+            .link-web {
+                grid-column: 3;
+                grid-row: 3/4;
+                justify-self: right;
+            }
+            .link-github {
+                grid-column: 4;
+                grid-row: 3/4;
+                justify-self: left;
+            }
+        }
+    }
+
+    .about {
+        overflow-y: auto;
+        width: 100%;
+        height: 60vh;
+        @include mq(smartphone) {
+            height: 52vh;
+            padding-bottom: 40px;
+        }
+        p {
+            width: 90%;
+            margin: 0 auto;
+            &.techs-intro {
+                margin-top: 30px;
+                text-align: center;
+                font-weight: 500;
+                @include mq(desktop-medium) {
+                    margin-top: 50px;
+                }
+            }
+            &:nth-of-type(2) {
+                margin-top: 15px;
+                @include mq(desktop-small) {
+                    margin-top: 20px;
+                }
+            }
+            animation: content-fade-in 1s ease-in both;
+            @for $i from 1 through 3 {
+                &:nth-of-type(#{$i}) {
+                    animation-delay: #{($i/10)}s;
+                }
+            }
+            @include mq(smartphone) {
+                width: 85%;
+            }
+            @include mq(desktop-small) {
+                font-size: 1.2rem;
+            }
+        }
+        .techs {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 80%;
+            margin: 20px auto 0 auto;
+            @include mq(desktop-medium) {
+                width: 60%;
+            }
+            i {
+                padding: 10px;
+                font-size: 1.6rem;
+                @include mq(desktop-small) {
+                    font-size: 1.8rem;
+                }
+                @include mq(desktop-medium) {
+                    font-size: 2.4rem;
+                }
+            }
+            img {
+                padding: 0 10px;
+                height: 1.6rem;
+                @include mq(desktop-small) {
+                    height: 1.8rem;
+                }
+                @include mq(desktop-medium) {
+                    height: 2.4rem;
+                }
+            }
+            & * {
+                animation: tech-flip 0.7s ease-in both;
+                @for $i from 1 through 9 {
+                    &:nth-child(#{$i}) {
+                        animation-delay: #{0.7 + ($i/20)}s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+main > {
+    .fade-left {
+        transform: translateX(-100vw);
+        opacity: 0.3;
+    }
+    .fade-right {
+        transform: translateX(100vw);
+        opacity: 0.3;
+    }
+    * {
+        transition: transform 0.7s ease-in-out, opacity 0.5s ease;
+    }
+}

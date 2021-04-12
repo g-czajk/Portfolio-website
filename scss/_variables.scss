@@ -1,0 +1,31 @@
+$font-size: 16px;
+$font-family: "Poppins", "sans-serif";
+$breakpoints: (
+    smartphone: (
+        min-width: 460px,
+    ),
+    smartphone-large: (
+        min-width: 640px,
+    ),
+    tablet: (
+        min-width: 900px,
+    ),
+    tablet-large: (
+        min-width: 1024px,
+    ),
+    desktop-small: (
+        min-width: 1280px,
+    ),
+    desktop-medium: (
+        min-width: 1600px,
+    ),
+    desktop-large: (
+        min-width: 1900px,
+    ),
+);
+
+$colors: (
+    main-dark: #012a4a,
+    main-medium: #014f86,
+    main-light: #a9d6e5,
+);
