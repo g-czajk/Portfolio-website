@@ -139,7 +139,7 @@ main {
             }
 
             animation: content-fade-in 1s ease-in both;
-            @for $i from 1 through 7 {
+            @for $i from 1 through 9 {
                 &:nth-of-type(#{$i}) {
                     animation-delay: #{($i/10)}s;
                 }
@@ -284,7 +284,7 @@ main {
             }
             & * {
                 animation: tech-flip 0.7s ease-in both;
-                @for $i from 1 through 9 {
+                @for $i from 1 through 10 {
                     &:nth-child(#{$i}) {
                         animation-delay: #{0.7 + ($i/20)}s;
                     }

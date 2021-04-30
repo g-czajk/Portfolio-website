@@ -16,6 +16,13 @@ const projects = [
         linkGitHub: "https://github.com/g-czajk/Sing-a-long-app",
     },
     {
+        name: "live-chat app",
+        desc: "a real time chat app",
+        techIcons: `<i class="fab fa-react"></i><i class='fab fa-js-square'></i><img src="./assets/firebase.svg" alt="Firebase logo">`,
+        linkWeb: "https://live-chat-59a56.web.app/",
+        linkGitHub: "https://github.com/g-czajk/Live-chat-app",
+    },
+    {
         name: "tactic-board app",
         desc: "a tool for a football coach",
         techIcons:
@@ -46,6 +53,13 @@ const projects = [
             "<i class='fab fa-js-square'></i><i class='fab fa-css3-alt'></i><i class='fab fa-html5'></i>",
         linkWeb: "https://g-czajk.github.io/Keyboard-challenge-app/",
         linkGitHub: "https://github.com/g-czajk/Keyboard-challenge-app",
+    },
+    {
+        name: "reaction-timer app",
+        desc: "an ap that measures your reaction time",
+        techIcons: `<i class="fab fa-react"></i><i class='fab fa-js-square'></i>`,
+        linkWeb: "https://g-czajk.github.io/Reaction-timer/",
+        linkGitHub: "https://github.com/g-czajk/Reaction-timer",
     },
     {
         name: "to-do-list app",
@@ -86,7 +100,7 @@ const render = (btn) => {
 <p class="description">${projects[i].desc}</p><div class="tech">${projects[i].techIcons}</div><div class="link link-web"><a href="${projects[i].linkWeb}" target="_blank"><i class="fas fa-globe-europe"></i></a></div><div class="link link-github"><a href="${projects[i].linkGitHub}" target="_blank"><i class="fab fa-github"></i></a></div></div>`;
         }
     } else if (btn === "about") {
-        main.innerHTML = `<h2>about me:</h2><div class="about"><p>I'm a self-taught junior front-end developer, passionate about creating and learning new things.</p><p>At the moment I'm constantly improving my programming skills (focusing on JS and Vue) and I'm willing to start working as a junior front-end dev.</p><p class="techs-intro">Techs I use:</p><div class="techs"><i class="fab fa-js-square"></i><i class="fab fa-vuejs"></i><i class="fab fa-css3-alt"></i><i class="fab fa-sass"></i><i class="fab fa-html5"></i><img src="./assets/firebase.svg" alt="firbase image"/><i class="fab fa-node"></i><i class="fab fa-git"></i><i class="fab fa-npm"></i></div></div>`;
+        main.innerHTML = `<h2>about me:</h2><div class="about"><p>I'm a self-taught junior front-end developer, passionate about creating and learning new things.</p><p>At the moment I'm constantly improving my programming skills (focusing on JS and Vue) and I'm willing to start working as a junior front-end dev.</p><p class="techs-intro">Techs I use:</p><div class="techs"><i class="fab fa-js-square"></i><i class="fab fa-vuejs"></i><i class="fab fa-react"></i><i class="fab fa-css3-alt"></i><i class="fab fa-sass"></i><i class="fab fa-html5"></i><img src="./assets/firebase.svg" alt="firbase image"/><i class="fab fa-node"></i><i class="fab fa-git"></i><i class="fab fa-npm"></i></div></div>`;
     } else if (btn === "contact") {
         console.log("contact");
     }
