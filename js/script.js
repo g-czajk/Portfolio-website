@@ -17,7 +17,7 @@ const projects = [
     },
     {
         name: "live-chat app",
-        desc: "a real time chat app",
+        desc: "a real-time chat app",
         techIcons: `<i class="fab fa-react"></i><i class='fab fa-js-square'></i><img src="./assets/firebase.svg" alt="Firebase logo">`,
         linkWeb: "https://live-chat-59a56.web.app/",
         linkGitHub: "https://github.com/g-czajk/Live-chat-app",
